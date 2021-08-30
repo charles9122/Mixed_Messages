@@ -10,18 +10,21 @@ function generateRandomNumber(num) {
     // Gets # from 0 -> num - 1
     return Math.floor(Math.random() * num)
   }
+  //create empty array to push songs to
 
-//create empty array to push songs to
 let playlist = [];
 
-console.log(songs);
-
-// Code for picking random song //
-function selectSong(array){
+// Code for picking random song and pushing it to playlist//
   for (let song in songs){
     let keyValue = songs[song];
     let randomIndex = generateRandomNumber(keyValue.length);
     playlist.push(keyValue[randomIndex]);
-    
+  
   };
 
+  // function displaying what songs were picked //
+function playlistDescriber() {
+    console.log(`Your playlist was picked at random, consists of ${playlist.length} songs and they are ${playlist.join(" ")}`)
+
+}
+playlistDescriber()
