@@ -15,3 +15,13 @@ function generateRandomNumber(num) {
 let playlist = [];
 
 console.log(songs);
+
+// Code for picking random song //
+function selectSong(array){
+  for (let song in songs){
+    let keyValue = songs[song];
+    let randomIndex = generateRandomNumber(keyValue.length);
+    playlist.push(keyValue[randomIndex]);
+    
+  };
+
